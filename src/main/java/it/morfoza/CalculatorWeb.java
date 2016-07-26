@@ -6,6 +6,13 @@ public class CalculatorWeb {
 
     public static void main(String[] args) {
 
+        String port = System.getenv("PORT");
+        if (port != null) {
+            int portInt = Integer.parseInt(port);
+            Spark.port(portInt);
+        }
+
+
         Spark.get("/calculator", (request, response) -> {
             return "<html>Hi <b>buddy</b>! </html>";
         });
