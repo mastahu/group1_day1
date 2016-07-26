@@ -1,6 +1,5 @@
 package it.morfoza;
 
-
 import java.util.Scanner;
 
 public class Main {
